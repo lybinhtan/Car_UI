@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/btn_Foward"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/a"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.665" />
+
+    <ImageButton
+        android:id="@+id/btn_Stop"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/car1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toEndOf="@+id/btn_Foward"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.665" />
+
+    <SeekBar
+        android:id="@+id/sk"
+        android:layout_width="234dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="444dp"
+        android:layout_marginLeft="444dp"
+        android:max="100"
+        android:min="0"
+        android:progressDrawable="@drawable/custom"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Foward"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.855" />
+
+    <it.beppi.tristatetogglebutton_library.TriStateToggleButton
+        android:id="@+id/gear"
+        android:layout_width="201dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:rotation="270"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Foward"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.518"
+        app:tbIsMidSelectable="true"
+        app:tbMidColor="#ffff00"
+        app:tbOffColor="#ff0000"
+        app:tbOnColor="#00ff00" />
+
+    <Button
+        android:id="@+id/btn_N"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="N"
+        android:textColor="#ff0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Foward"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gear"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <Button
+        android:id="@+id/btn_D"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:text="D"
+        android:textColor="#ffff00"
+        app:layout_constraintBottom_toTopOf="@+id/btn_N"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Foward"
+        app:layout_constraintHorizontal_bias="0.972"
+        app:layout_constraintStart_toEndOf="@+id/gear"
+        app:layout_constraintTop_toBottomOf="@+id/btn_R"
+        app:layout_constraintVertical_bias="0.509" />
+
+    <Button
+        android:id="@+id/btn_R"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="R"
+        android:textColor="#00ff00"
+        app:layout_constraintBottom_toTopOf="@+id/gear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.727" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+</android.support.constraint.ConstraintLayout>
